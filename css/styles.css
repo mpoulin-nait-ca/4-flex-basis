@@ -1,0 +1,71 @@
+/* Colour Palette
+
+Red    #e24c3b
+White  #fbf3ef
+Blue   #0088e0
+
+*/
+
+body {
+  font-family: 'Oswald', sans-serif;
+}
+
+h2 {
+  font-size: 2rem;
+  padding-bottom: 1rem;
+}
+
+p {
+  font-size: 1.2rem;
+  font-family: 'Arvo', serif;
+}
+
+/* Mobile Layout */
+
+
+svg {
+  width: 50px;
+}
+main {
+  background-image: url(../img/pole-closeup-mobile.webp);
+  background-size: cover;
+  background-position: center center;
+  color: white;
+  text-align: center;
+}
+
+main .container {
+  display: flex;
+  padding: 1rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+section {
+  background-color: rgba(0, 0, 0, .6);
+  margin: 1rem;
+  padding: 2rem;
+  flex-grow: 1;
+}
+
+@media(min-width: 600px) {
+    main {
+      background-image: url(../img/pole-closeup.webp);      
+    }
+    main .container {
+      max-width: 960px;
+      margin: 0 auto;
+
+    }
+    section {
+      flex-basis: 320px;
+      flex-grow: 1;
+      margin: 0;
+    }
+    h2 {
+      width: 100%;
+    }
+    section:first-of-type, section:last-of-type {
+      flex-grow: 0;
+    }
+}
