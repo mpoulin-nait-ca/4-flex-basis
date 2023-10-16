@@ -26,7 +26,7 @@ p {
 svg {
   width: 50px;
 }
-main {
+body {
   background-image: url(../img/pole-closeup-mobile.webp);
   background-size: cover;
   background-position: center center;
@@ -43,13 +43,43 @@ main .container {
 
 section {
   background-color: rgba(0, 0, 0, .6);
-  margin: 1rem;
+  /* margin: 1rem; */
   padding: 2rem;
   flex-grow: 1;
 }
 
-@media(min-width: 600px) {
-    main {
+nav ul {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+nav li:first-of-type, nav li:last-of-type {
+  background-color: red;
+ 
+}
+nav li {
+  padding: .5rem;
+  background-color: blue;
+}
+nav li:nth-of-type(even) {
+  background-color: white;
+}
+
+nav a {
+  color: black;
+  text-decoration: none;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+h2 {
+  width: 100%;
+}
+
+
+@media(min-width: 700px) {
+    body {
       background-image: url(../img/pole-closeup.webp);      
     }
     main .container {
@@ -62,10 +92,37 @@ section {
       flex-grow: 1;
       margin: 0;
     }
-    h2 {
-      width: 100%;
-    }
+    
     section:first-of-type, section:last-of-type {
       flex-grow: 0;
     }
+    nav li, nav li:first-of-type, nav li:last-of-type, nav li:nth-of-type(even) {
+      background-color: unset;
+    }
+    nav li:first-of-type {
+      order: 3;
+      flex-grow: 3;
+    }
+    nav li:nth-of-type(4), nav li:last-of-type {
+      order: 10;
+    }
+    nav ul {
+      flex-direction: row;
+      align-items: center;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    nav {
+      background-color: rgba(0, 0, 0, .6);
+    }
+    nav a {
+      color: white;
+    }
+    nav svg {
+      fill: white;
+    }
+    nav li {
+      flex-grow: 1;
+    }
+
 }
